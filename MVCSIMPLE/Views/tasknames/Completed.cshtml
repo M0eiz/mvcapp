@@ -1,0 +1,28 @@
+﻿@model MVCSIMPLE.Models.taskname
+@{
+    ViewBag.Title = "Completed";
+}
+
+<h2>Completed</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Taskname1)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Taskname1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Taskname1)
+        </dd>
+
+    </dl>
+</div>
+
+<div class="form-actions no-color">
+        <input type="checkbox" value="Completed" class="btn btn-default" /> |
+        @Html.ActionLink("Back to List", "Index")
+</div>
+
+

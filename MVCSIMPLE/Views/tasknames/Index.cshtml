@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MVCSIMPLE.Models.taskname>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Task List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <h5><b>Tasks</b></h5>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Taskname1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id }) |
+            @Html.ActionLink("Completed", "Completed", new { id = item.id })
+
+        </td>
+    </tr>
+}
+
+</table>
